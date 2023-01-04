@@ -34,8 +34,8 @@ import {
   UPDATE_ADDRESS,
 } from "../actions/actionNames";
 
-const URL = "http://localhost:3001";
-// const URL = "https://pfbackend-production.up.railway.app";
+// const URL = "http://localhost:3001";
+const URL = "https://playexpertback-production.up.railway.app";
 
 export function allProducts() {
   return function (dispatch) {
@@ -128,10 +128,9 @@ export function deleteProduct(id) {
     const res = await axios.delete(`${URL}/products/${id}`);
     return dispatch({ type: DELETE_PRODUCT, payload: res.data });
   };
-};
+}
 
 export const updateProductsStock = userId => async dispatch => {
-
   try {
     const res = await axios.put(`${URL}/products/stock/${userId}`);
     dispatch({ type: UPDATE_STOCK, payload: res.data });
