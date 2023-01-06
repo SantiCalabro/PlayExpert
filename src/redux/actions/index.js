@@ -37,11 +37,11 @@ import {
   UPDATE_ADDRESS,
   POST_REVIEW,
   GET_TOTAL_ORDERS,
-  GET_ALL_ORDERS
+  GET_ALL_ORDERS,
 } from "../actions/actionNames";
 
-const URL = "http://localhost:3001";
-// const URL = "https://playexpertback-production.up.railway.app";
+// const URL = "http://localhost:3001";
+const URL = "https://playexpertback-production.up.railway.app";
 
 export function allProducts() {
   return function (dispatch) {
